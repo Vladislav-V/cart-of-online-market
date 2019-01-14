@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Cart Online-Market</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	
+	<style>
+		.item_box {
+			padding: 20px;
+			
+		}
+		.img_goods {
+			height: 200px;
+		}
+		.img_goods img {
+			height: 100%;
+			width: 100%;
+		}
+		table img {
+
+			height: 100px;
+			
+		}
+		.delete_item img {
+			width: 30px;
+			height: 30px;
+			cursor: pointer;
+			
+		}
+		.delete_item img:hover {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+<div>
+	<h1> Cart of Online-Market</h1>
+</div>
+
+<br />
+
+<div class="container"> 
+	<div class="row">  
+		<div class="col-md-4">
+		    <div class="item_box card">
+		      <h3 class="item_title">Samsung Galaxy S10</h3>
+			<span class="img_goods">
+			<img src="img/samsung.jpg" alt="упс..." />
+			</span>
+		      <p>Цена: <span class="item_price">20</span>$</p>
+		      <button class="add_item" data-id="7">Добавить в корзину</button>
+		    </div>
+		</div>
+		<div class="col-md-4 ">
+		    <div class="item_box card">
+		      <h3 class="item_title">LG Optimus G E100500</h3>
+			<span class="img_goods">
+			<img src="img/samsung.jpg" alt="упс..." />
+			</span>
+		      <p>Цена: <span class="item_price">100</span>$</p>
+		      <button class="add_item" data-id="2">Добавить в корзину</button>
+		    </div>
+		</div>
+		<div class="col-md-4">
+		    <div class="item_box card">
+		      <h3 class="item_title">Nokia 2110</h3>
+			<span class="img_goods">
+			<img src="img/samsung.jpg" alt="упс..." />
+			</span>
+		      <p>Цена: <span class="item_price">1000</span>$</p>
+		      <button class="add_item" data-id="5">Добавить в корзину</button>
+		    </div>
+		</div>
+		
+	</div>
+		<br />
+		<hr />
+	
+		<br />
+    <button id="checkout">Оформить заказ</button>
+    <button id="clear_cart">Очистить корзину</button>
+    <div id="cart_content"></div>
+	<div id="img"></div>
+
+
+	
+	
+</div>
+<script src="myjavascript.js"></script>
+</body>
+</html>
