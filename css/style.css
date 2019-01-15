@@ -1,0 +1,63 @@
+﻿* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #e4e4e4;	
+}	
+
+.item_box {
+
+			padding: 20px;
+
+			
+
+		}
+
+		.img_goods {
+
+			height: 200px;
+
+		}
+
+		.img_goods img {
+
+			height: 100%;
+
+			width: 100%;
+
+		}
+
+		table img {
+
+
+			height: 100px;
+
+			
+
+		}
+
+		.delete_item {
+
+			font-size: 30px;
+
+
+			cursor: pointer;
+
+		}
+
+		.delete_item:hover {
+
+			color: red;
+
+		}
+
+
+		.header {
+			
+		}
+		.open-cart-btn {
+			top: 300px;
+			position: absolute;
+		}

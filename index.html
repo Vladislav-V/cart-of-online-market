@@ -1,95 +1,165 @@
 ﻿<!DOCTYPE html>
+
 <html>
+
 <head>
+
 	<meta charset="UTF-8">
+
 	<title>Cart Online-Market</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
 	
-	<style>
-		.item_box {
-			padding: 20px;
-			
-		}
-		.img_goods {
-			height: 200px;
-		}
-		.img_goods img {
-			height: 100%;
-			width: 100%;
-		}
-		table img {
 
-			height: 100px;
-			
-		}
-		.delete_item {
-			font-size: 30px;
 
-			cursor: pointer;
-		}
-		.delete_item:hover {
-			color: red;
-		}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-	</style>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="css/style.css">	
 </head>
+
 <body>
-<div>
-	<h1> Cart of Online-Market</h1>
+
+<div class="container-fluid header">
+	<div class="row">
+		<div class="col">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-outline-success my-sm-3 mr-sm-2 open-cart-btn" type="submit" id="checkout">Корзина</button>
+
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+		</div>
+	</div>
 </div>
 
-<br />
 
 <div class="container"> 
+
 	<div class="row">  
+
 		<div class="col-md-4">
+
 		    <div class="item_box card">
+
 		      <h3 class="item_title">Samsung Galaxy S10</h3>
+
 			<span class="img_goods">
+
 			<img src="img/samsung.jpg" alt="упс..." />
+
 			</span>
+
 		      <p>Цена: <span class="item_price">20</span>$</p>
-		      <button class="add_item" data-id="7">Добавить в корзину</button>
+
+		      <button class="add_item btn btn-success" data-id="7">Добавить в корзину</button>
+
 		    </div>
+
 		</div>
+
 		<div class="col-md-4 ">
+
 		    <div class="item_box card">
+
 		      <h3 class="item_title">LG Optimus G E100500</h3>
+
 			<span class="img_goods">
+
 			<img src="img/samsung.jpg" alt="упс..." />
+
 			</span>
+
 		      <p>Цена: <span class="item_price">100</span>$</p>
-		      <button class="add_item" data-id="2">Добавить в корзину</button>
+
+		      <button class="add_item btn btn-success" data-id="2">Добавить в корзину</button>
+
 		    </div>
+
 		</div>
+
 		<div class="col-md-4">
+
 		    <div class="item_box card">
+
 		      <h3 class="item_title">Nokia 2110</h3>
+
 			<span class="img_goods">
+
 			<img src="img/samsung.jpg" alt="упс..." />
+
 			</span>
+
 		      <p>Цена: <span class="item_price">1000</span>$</p>
-		      <button class="add_item" data-id="5">Добавить в корзину</button>
+
+		      <button class="add_item btn btn-success" data-id="5">Добавить в корзину</button>
+
 		    </div>
+
 		</div>
+
 		
 	</div>
-		<br />
-		<hr />
+
 		<br />
 
-	<button type="button" class="btn btn-primary" id="checkout">
+
+		<hr />
+
+		<br />
+
+
+	<!-- <button type="button" class="btn btn-primary" id="checkout">
+
 		Корзина
-	</button>
+
+	</button> -->
+
     <button class="btn btn-light" id="clear_cart">Очистить корзину</button>
+
     <div id="cart_content"></div>
+
 	<div id="img"></div>
 
 
+
 	
 	
 </div>
+
 <script src="myjavascript.js"></script>
+
 </body>
+
 </html>
