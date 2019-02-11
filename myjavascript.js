@@ -141,17 +141,33 @@ var d = document,
 
 	
 
-        totalItems += '<tr><td></td><td></td><td><b>Итого<b></td><td>' + totalSum + '</td></table>';
+        totalItems += '<tr><td></td><td></td><td><b>Итого<b></td><td>' + totalSum + '</td></table><div class="clear-cart"><button class="btn btn-danger" id="clear_cart">Очистить корзину</button></div>';
 
         cartCont.innerHTML = totalItems;
 
           addHandlers();
 
+	/* Очистить корзину */
+
+    addEvent(d.getElementById('clear_cart'), 'click', function(e){
+
+console.log('GOOD');
+      localStorage.removeItem('cart');
+
+
+      cartCont.innerHTML = 'Корзина очишена.';
+
+	
+        amountOfGoods();
+
+    });
       } else {
 
         // если в корзине пусто, то сигнализируем об этом
 
-        cartCont.innerHTML = 'В корзине пусто!';
+        cartCont.innerHTML = '<div class="non_item_message"><span>В корзине пусто!</span>' +
+	'<a href="index.html"><button id="checkout" class="cart-btn btn btn-outline-success my-2 mr-sm-2" type="button">' +
+	'Перейти к покупкам</button></div></a>';
 
       }
 
@@ -167,22 +183,13 @@ var d = document,
     console.log(cartCont.innerHTML);
 
 
+
     /* Открыть корзину */
 
     addEvent(d.getElementById('checkout'), 'click', showCart);
 
-    /* Очистить корзину */
 
-    addEvent(d.getElementById('clear_cart'), 'click', function(e){
-
-      localStorage.removeItem('cart');
-
-
-      cartCont.innerHTML = 'Корзина очишена.';
-
-        amountOfGoods();
-
-    });
+    
 
 
 
@@ -217,7 +224,8 @@ var d = document,
     }
 
 amountOfGoods();
-    
+
+    // Удаление элемента из карзины
     function deleteItemOfCartList(e) {
 
         var tableCol = this.parentNode.cellIndex - 1;
@@ -252,6 +260,7 @@ function addHandlers() {
     var deleteItemBox = d.querySelectorAll('.delete_item_box');
 
 
+	// Обработчик на все крестики
     for (var i = 0; i < deleteItemBox.length; i++) {
 
         addEvent(deleteItemBox[i].querySelector('.delete_item'), 'click', deleteItemOfCartList);
@@ -260,28 +269,33 @@ function addHandlers() {
 
 }
 
-function showCart(event) {
+ // Паказ карзины
+function showCart(e) {
 
-    	//e.stopPropagation();
-	var cart = document.getElementById('cart_content');
-    // var button = event.target;
-    // var closest = button.closest('.open-cart-btn')
-    var closest = cart.getBoundingClientRect();
-    console.log(closest);
-    cart.style.top = closest.bottom;
-    cart.style.right = closest.right;
+    	e.stopPropagation();
+	var cart = document.querySelector('.cart-content');
     if( STATE.showCart ) {
 	cart.style.display = "none";
 	
       	STATE.showCart = false;
 	
     } else {
-openCart();
+var button = e.target;
+var closest = button.closest('.cart-btn').getBoundingClientRect();
+console.log(closest);
+cart.style.top = closest.bottom + 20 + 'px';
+
+//console.log(cart.style.top);
+//console.log(closest.bottom);
+
+openCart(e);
 cart.style.display = "block";
   STATE.showCart = true;
 
 	}
 	
 }
+
+
 
 

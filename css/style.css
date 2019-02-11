@@ -57,7 +57,32 @@ body {
 		.header {
 			
 		}
-		.open-cart-btn {
-			top: 300px;
-			position: absolute;
-		}
+
+.cart-content {
+	position: absolute;
+	background-color: #fff;
+	min-height:100px;
+	min-width: 50%;
+	margin-left: auto;
+  	margin-right: 0em;
+	width: 90%;
+	border: 1px solid #a5a5a5;
+	border-radius: 5px;
+	box-shadow: 1px 2px 3px #575656;
+	
+}
+
+.cart-content .non_item_message {
+	text-align: center;
+	font-size: 26px;;	
+}
+.cart-content .non_item_message span {
+	margin: 10px;	
+}
+
+.clear-cart {
+	margin-left: auto;
+  	margin-right: 0em;
+	max-width: 190px; /* блок занимает ширину родителя, max-width её ограничивает */
+  	min-height: 2em;
+}
